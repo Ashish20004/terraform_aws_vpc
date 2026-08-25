@@ -51,7 +51,7 @@ variable "private_subnet_tags"{
 
 variable "database_subnets_cidr"{
     type = list
-    default = ["10.0.21.0/24","10.0.22.0./24"]
+    default = ["10.0.21.0/24","10.0.22.0/24"]
 }
 
 variable "database_subnet_tags"{
