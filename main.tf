@@ -80,7 +80,7 @@ resource "aws_route_table" "private" {
     tags =  merge(
         local.common_tags,
         {
-            Name = "${var.project}-${var.environment}-public"
+            Name = "${var.project}-${var.environment}-private"
         },
         var.public_route_table_tags
 
