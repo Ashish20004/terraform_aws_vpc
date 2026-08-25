@@ -46,7 +46,7 @@ resource "aws_subnet" "private" {
         var.private_subnet_tags
     )
 }
-resource "aws_subnet" "databse" {
+resource "aws_subnet" "database" {
     count = length(var.database_subnets_cidr)
     vpc_id  = aws_vpc.main.id
     cidr_block = var.database_subnets_cidr[count.index]
@@ -153,7 +153,7 @@ resource "aws_route_table_association" "public" {
 }
 
 resource "aws_route_table_association" "private" {
-    count = lenght(var.private_subnets_cidr)
+    count = length(var.private_subnets_cidr)
     subnet_id  = aws_subnet.private[count.index].id
     route_table_id = aws_route_table.private.id
 }
