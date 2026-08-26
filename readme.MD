@@ -1,10 +1,11 @@
-terraform_aws_vpc
+##terraform_aws_vpc
 
 Developed a terraform module to provision a production ready AWS VPC featuring public, private, amd database subnets along with internet Gateway NAT Gateway and Route tables
 
 
-How to use this module
+##How to use this module
 
+```hcl
 module "vpc" {
   source = "git::https://github.com/Ashish20004/terraform_aws_vpc.git?ref=main"
 
@@ -19,11 +20,10 @@ module "vpc" {
 
   is_peering_required = false
 }
+```
 
 
-
-
-features 
+##Features 
 
 - Deploys a ready-to-use AWS VPC having a configurable CIDR block and DNS hostname enabled.
 - Deploys public, private, and database subnets within multiple Availability Zones.
